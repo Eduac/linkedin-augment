@@ -11,6 +11,7 @@ var Person = require('greenlight-models').Person;
 
 mongoose.set('debug', true);
 mongoose.connect(process.env.MONGODB_URI);
+app.linkedinDelay = 500;
 
 describe('The application', function(){
 
