@@ -1,6 +1,7 @@
 'use strict';
 
 var _ = require('lodash');
+var Promise = require('bluebird');
 var expect = require('chai').expect;
 var sinon = require('sinon');
 var linkedinEx = require('linkedin-extractor');
