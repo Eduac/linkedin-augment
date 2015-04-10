@@ -10,6 +10,13 @@ if(!process.env.MONGODB_URI){
 }
 mongoose.connect(process.env.MONGODB_URI);
 
+if(!process.env.LINKEDIN_EMAIL){
+  console.log('You must set the LINKEDIN_EMAIL environment varible.');
+}
+if(!process.env.LINKEDIN_PASSWORD){
+  console.log('You must set the LINKEDIN_PASSWORD environment varible.');
+}
+
 mongoose.set('debug', true);
 
 var runAsync = function(){
@@ -18,4 +25,4 @@ var runAsync = function(){
   });
 };
 
-runAsync();
+app.loginAsync(process.env.LINKEDIN_EMAIL, process.env.LINKEDIN_PASSWORD).then(runAsync);

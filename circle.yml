@@ -5,7 +5,7 @@ machine:
     DOCKER_EMAIL: deploy@blikk.co
     DOCKER_USER: blikkdeploy
     LOG_NAME: greenlight-linkedin-augment
-    VERSION: 0.1.3
+    VERSION: 0.1.4
 
 dependencies:
   pre:
