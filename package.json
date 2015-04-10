@@ -1,6 +1,6 @@
 {
   "name": "greenlight-linkedin-augment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Augments Person data with Linkedin profile information.",
   "main": "app.js",
   "scripts": {

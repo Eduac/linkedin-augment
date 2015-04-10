@@ -14,7 +14,7 @@ mongoose.set('debug', true);
 
 var runAsync = function(){
   return app.updatePeopleAsync().then(function(){
-    return Promise.delay(10000).then(runAsync);
+    return Promise.delay(30000).then(runAsync);
   });
 };
 
