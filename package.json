@@ -1,0 +1,34 @@
+{
+  "name": "greenlight-linkedin-augment",
+  "version": "0.1.0",
+  "description": "Augments Person data with Linkedin profile information.",
+  "main": "app.js",
+  "scripts": {
+    "test": "NODE_ENV=test MONGODB_URI=mongodb://localhost/gla-test LOG_NAME=test mocha",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blikkhq/greenlight-linkedin-augment"
+  },
+  "author": "Denny Britz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blikkhq/greenlight-linkedin-augment/issues"
+  },
+  "homepage": "https://github.com/blikkhq/greenlight-linkedin-augment",
+  "dependencies": {
+    "blikk-logjs": "^0.1.2",
+    "bluebird": "^2.9.24",
+    "greenlight-models": "^0.1.4",
+    "linkedin-extractor": "^0.1.2",
+    "lodash": "^3.6.0",
+    "moment": "^2.10.2",
+    "mongoose": "^4.0.1"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "dotenv": "^1.1.0",
+    "sinon": "^1.14.1"
+  }
+}

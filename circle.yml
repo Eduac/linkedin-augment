@@ -1,0 +1,21 @@
+machine:
+  services:
+    - docker
+  environment:
+    DOCKER_EMAIL: deploy@blikk.co
+    DOCKER_USER: blikkdeploy
+    LOG_NAME: greenlight-linkedin-augment
+    VERSION: 0.1.0
+
+dependencies:
+  pre:
+    - docker login -e $DOCKER_EMAIL  -u $DOCKER_USER -p $DOCKER_PASSWORD
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker build -t blikk/greenlight-linkedin-augment .
+      - docker tag blikk/greenlight-linkedin-augment:latest blikk/greenlight-linkedin-augment:$CIRCLE_SHA1
+      - docker tag blikk/greenlight-linkedin-augment:latest blikk/greenlight-linkedin-augment:$VERSION
+      - docker push blikk/greenlight-linkedin-augment
